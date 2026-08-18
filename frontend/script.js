@@ -121,7 +121,7 @@ function loadBonzis(a) {
         { id: "bonziInverted", src: "./img/bonzi/inverted.png" },
         { id: "bonziRonnie", src: "./img/bonzi/ronnie.png" },
         { id: "bonziBlessed", src: "./img/bonzi/blessed.png" },
-        { id: "bonziAllah", src: "./img/bonzi/allah.png" },
+        { id: "bonziXboxkid", src: "./img/bonzi/xboxkid.png" },
         { id: "bonziWhite", src: "./img/bonzi/white.png" },
         { id: "bonziYellow", src: "./img/bonzi/yellow.png" },
         { id: "bonziTroll", src: "./img/bonzi/troll.png" },
@@ -1375,7 +1375,7 @@ $(document).ready(function () {
             (this.framerate = 1 / 15),
             (this.spriteSheets = {}),
             (this.prepSprites = function () {
-                for (var a = ["black", "blue", "brown", "green", "purple", "red", "pink", "pope", "king", "jabba", "seamus", "jew", "inverted", "dress", "orange", "floyd", "blessed", "ronnie", "allah", "white", "yellow", "troll", "rabbi"], b = 0; b < a.length; b++) {
+                for (var a = ["black", "blue", "brown", "green", "purple", "red", "pink", "pope", "king", "jabba", "seamus", "jew", "inverted", "dress", "orange", "floyd", "blessed", "ronnie", "xboxkid", "white", "yellow", "troll", "rabbi"], b = 0; b < a.length; b++) {
                     var c = a[b],
                         d = { images: ["./img/bonzi/" + c + ".png"], frames: BonziData.sprite.frames, animations: BonziData.sprite.animations };
                     this.spriteSheets[c] = new createjs.SpriteSheet(d);
@@ -1456,7 +1456,7 @@ $(document).ready(function () {
     Object.defineProperty(Array.prototype, "equals", { enumerable: !1 });
 var loadQueue = new createjs.LoadQueue(),
     loadDone = [],
-    loadNeeded = ["bonziBlack", "bonziBlue", "bonziBrown", "bonziGreen", "bonziPurple", "bonziRed", "bonziPink", "bonziJew", "bonziOrange", "bonziSeamus", "bonziDress", "bonziJabba", "bonziInverted", "bonziFloyd", "bonziRonnie", "bonziBlessed", "bonziAllah", "bonziWhite", "bonziYellow", "bonziTroll", "bonziRabbi", "topjej"];
+    loadNeeded = ["bonziBlack", "bonziBlue", "bonziBrown", "bonziGreen", "bonziPurple", "bonziRed", "bonziPink", "bonziJew", "bonziOrange", "bonziSeamus", "bonziDress", "bonziJabba", "bonziInverted", "bonziFloyd", "bonziRonnie", "bonziBlessed", "bonziXboxkid", "bonziWhite", "bonziYellow", "bonziTroll", "bonziRabbi", "topjej"];
 $(window).load(function () {
     $("#login_card").show(), $("#login_load").hide(), loadBonzis();
     $("#login_name").val(cookieobject.namee);
