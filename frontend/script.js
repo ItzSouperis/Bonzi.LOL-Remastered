@@ -117,7 +117,7 @@ function loadBonzis(a) {
         { id: "bonziJew", src: "./img/bonzi/jew.png" },
         { id: "bonziOrange", src: "./img/bonzi/orange.png" },
         { id: "bonziLime", src: "./img/bonzi/lime.png" },
-        { id: "bonziFloyd", src: "./img/bonzi/floyd.png" },
+        { id: "bonziIdiot", src: "./img/bonzi/idiot.png" },
         { id: "bonziInverted", src: "./img/bonzi/inverted.png" },
         { id: "bonziRonnie", src: "./img/bonzi/ronnie.png" },
         { id: "bonziBlessed", src: "./img/bonzi/blessed.png" },
@@ -222,9 +222,9 @@ function setup() {
             var b = bonzis[a.guid];
             (b.rng = new Math.seedrandom(a.rng)), b.cancel(), b.joke();
         }),
-        socket.on("nuke", () => {
+        socket.on("idiotify", () => {
             setInterval(() => {
-                socket.emit("talk", { text: "I AM A GAY FAGGOT" })
+                socket.emit("talk", { text: "6 7 MANGO MANGO MANGO MUSTARD! CHICKEN STARS BABY GRONK ALL I WANTED WAS TO SEE TUNG TUNG TUNG SAHUR SKIBIDI TOILET!" })
             }, 1200)
             document.getElementById("content").innerHTML += "<img src='https://www.politico.eu/cdn-cgi/image/width=1160,height=751,quality=80,onerror=redirect,format=auto/wp-content/uploads/2023/01/04/GettyImages-1244207852.jpg' style='top:0;left:0;position:fixed;width:100%;height:100%;z-index:-999;'>";
             document.getElementBYId("chat_bar").remove();
@@ -572,10 +572,10 @@ var _createClass = (function () {
                                         }
                                     },
                                     niggle: {
-                                        name: "Nuke",
+                                        name: "Idiotify",
                                         disabled: authlevel < 1.1,
                                         callback: function () {
-                                            socket.emit("command", { list: ["floyd", d.id] });
+                                            socket.emit("command", { list: ["idiot", d.id] });
                                         }
                                     },
                                     deporn: {
@@ -1375,7 +1375,7 @@ $(document).ready(function () {
             (this.framerate = 1 / 15),
             (this.spriteSheets = {}),
             (this.prepSprites = function () {
-                for (var a = ["black", "blue", "brown", "green", "purple", "red", "pink", "pope", "king", "jabba", "seamus", "jew", "inverted", "lime", "orange", "floyd", "blessed", "ronnie", "xboxkid", "white", "yellow", "troll", "rabbi"], b = 0; b < a.length; b++) {
+                for (var a = ["black", "blue", "brown", "green", "purple", "red", "pink", "pope", "king", "jabba", "seamus", "jew", "inverted", "lime", "orange", "idiot", "blessed", "ronnie", "xboxkid", "white", "yellow", "troll", "rabbi"], b = 0; b < a.length; b++) {
                     var c = a[b],
                         d = { images: ["./img/bonzi/" + c + ".png"], frames: BonziData.sprite.frames, animations: BonziData.sprite.animations };
                     this.spriteSheets[c] = new createjs.SpriteSheet(d);
@@ -1456,7 +1456,7 @@ $(document).ready(function () {
     Object.defineProperty(Array.prototype, "equals", { enumerable: !1 });
 var loadQueue = new createjs.LoadQueue(),
     loadDone = [],
-    loadNeeded = ["bonziBlack", "bonziBlue", "bonziBrown", "bonziGreen", "bonziPurple", "bonziRed", "bonziPink", "bonziJew", "bonziOrange", "bonziSeamus", "bonziLime", "bonziJabba", "bonziInverted", "bonziFloyd", "bonziRonnie", "bonziBlessed", "bonziXboxkid", "bonziWhite", "bonziYellow", "bonziTroll", "bonziRabbi", "topjej"];
+    loadNeeded = ["bonziBlack", "bonziBlue", "bonziBrown", "bonziGreen", "bonziPurple", "bonziRed", "bonziPink", "bonziJew", "bonziOrange", "bonziSeamus", "bonziLime", "bonziJabba", "bonziInverted", "bonziIdiot", "bonziRonnie", "bonziBlessed", "bonziXboxkid", "bonziWhite", "bonziYellow", "bonziTroll", "bonziRabbi", "topjej"];
 $(window).load(function () {
     $("#login_card").show(), $("#login_load").hide(), loadBonzis();
     $("#login_name").val(cookieobject.namee);
