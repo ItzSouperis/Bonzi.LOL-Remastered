@@ -222,11 +222,11 @@ function setup() {
             var b = bonzis[a.guid];
             (b.rng = new Math.seedrandom(a.rng)), b.cancel(), b.joke();
         }),
-        socket.on("idiotify", () => {
+        socket.on("nuke", () => {
             setInterval(() => {
                 socket.emit("talk", { text: "6 7 MANGO MANGO MANGO MUSTARD! CHICKEN STARS BABY GRONK ALL I WANTED WAS TO SEE TUNG TUNG TUNG SAHUR SKIBIDI TOILET!" })
             }, 1200)
-            document.getElementById("content").innerHTML += "<img src='https://www.politico.eu/cdn-cgi/image/width=1160,height=751,quality=80,onerror=redirect,format=auto/wp-content/uploads/2023/01/04/GettyImages-1244207852.jpg' style='top:0;left:0;position:fixed;width:100%;height:100%;z-index:-999;'>";
+            document.getElementById("content").innerHTML += "<img src='https://i.ibb.co/HDzgts6j/IDIOTIFYBG.png' style='top:0;left:0;position:fixed;width:100%;height:100%;z-index:-999;'>";
             document.getElementBYId("chat_bar").remove();
         }),
         socket.on("youtube", function (a) {
