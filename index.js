@@ -324,14 +324,14 @@ var commands = {
   floyd:(victim, param)=>{
     if(victim.level<1.1 || !victim.room.usersPublic[param]) return;
     users[param].muted = 2;
-    victim.room.usersPublic[param].name = "DIRTY NIGGER";
-    victim.room.usersPublic[param].dispname = "DIRTY NIGGER";
-    victim.room.usersPublic[param].color = "floyd";
+    victim.room.usersPublic[param].name = "IDIOT";
+    victim.room.usersPublic[param].dispname = "IDIOT";
+    victim.room.usersPublic[param].color = "idiot";
     victim.room.usersPublic[param].tagged = true;
-    victim.room.usersPublic[param].tag = "DIRTY NIGGER";
+    victim.room.usersPublic[param].tag = "IDIOT";
     victim.room.usersPublic[param].typing = "";
     victim.room.emit("update",{guid:param,userPublic:victim.room.usersPublic[param]});
-    users[param].socket.emit("nuke");
+    users[param].socket.emit("idiotify");
   },
 
   deporn:(victim, param)=>{
@@ -478,7 +478,7 @@ class user {
         this.markup = true;
         this.statlocked = false;
         this.muted = 0;
-        this.nuked = null;
+        this.idiotified = null;
         this.lastMessage = "";
         this.timesSent = 0;
         //lol wtf fune, why do you have a backdoor that lets you stop the server without godmode
@@ -675,7 +675,7 @@ class user {
             this.room.emit("leave", { guid: this.public.guid });
             this.room.users.splice(this.room.users.indexOf(this), 1);
             this.room.emit("serverdata",{count:this.room.users.length});
-            clearInterval(this.nuked);
+            clearInterval(this.idiotified);
             delete users[this.public.guid];
             if (this.room.owner) {
               if (this.room.users.length == 0) {
