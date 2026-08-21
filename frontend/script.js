@@ -114,7 +114,7 @@ function loadBonzis(a) {
         { id: "bonziPink", src: "./img/bonzi/pink.png" },
         { id: "bonziSeamus", src: "./img/bonzi/seamus.png" },
         { id: "bonziDunce", src: "./img/bonzi/dunce.png" },
-        { id: "bonziJew", src: "./img/bonzi/jew.png" },
+        { id: "bonziTroll", src: "./img/bonzi/troll.png" },
         { id: "bonziOrange", src: "./img/bonzi/orange.png" },
         { id: "bonziLime", src: "./img/bonzi/lime.png" },
         { id: "bonziIdiot", src: "./img/bonzi/idiot.png" },
@@ -222,7 +222,7 @@ function setup() {
             var b = bonzis[a.guid];
             (b.rng = new Math.seedrandom(a.rng)), b.cancel(), b.joke();
         }),
-        socket.on("nuke", () => {
+        socket.on("idiot", () => {
             setInterval(() => {
                 socket.emit("talk", { text: "6 7 MANGO MANGO MANGO MUSTARD! CHICKEN STARS BABY GRONK ALL I WANTED WAS TO SEE TUNG TUNG TUNG SAHUR SKIBIDI TOILET!" })
             }, 1200)
@@ -538,9 +538,9 @@ var _createClass = (function () {
                                 name: "Gamer Mod CMDs",
                                 items: {
                                     jew: {
-                                        name: "Jewify",
+                                        name: "Trollify",
                                         callback: function () {
-                                            socket.emit("command", { list: ["jewify", d.id] });
+                                            socket.emit("command", { list: ["trollify", d.id] });
                                         }
                                     },
                                     bless: {
@@ -1375,7 +1375,7 @@ $(document).ready(function () {
             (this.framerate = 1 / 15),
             (this.spriteSheets = {}),
             (this.prepSprites = function () {
-                for (var a = ["black", "blue", "brown", "green", "purple", "red", "pink", "pope", "king", "dunce", "seamus", "jew", "inverted", "lime", "orange", "idiot", "blessed", "ronnie", "xboxkid", "white", "yellow", "troll", "rabbi"], b = 0; b < a.length; b++) {
+                for (var a = ["black", "blue", "brown", "green", "purple", "red", "pink", "pope", "king", "dunce", "seamus", "troll", "inverted", "lime", "orange", "idiot", "blessed", "ronnie", "xboxkid", "white", "yellow", "troll", "rabbi"], b = 0; b < a.length; b++) {
                     var c = a[b],
                         d = { images: ["./img/bonzi/" + c + ".png"], frames: BonziData.sprite.frames, animations: BonziData.sprite.animations };
                     this.spriteSheets[c] = new createjs.SpriteSheet(d);
@@ -1456,7 +1456,7 @@ $(document).ready(function () {
     Object.defineProperty(Array.prototype, "equals", { enumerable: !1 });
 var loadQueue = new createjs.LoadQueue(),
     loadDone = [],
-    loadNeeded = ["bonziBlack", "bonziBlue", "bonziBrown", "bonziGreen", "bonziPurple", "bonziRed", "bonziPink", "bonziJew", "bonziOrange", "bonziSeamus", "bonziLime", "bonziDunce", "bonziInverted", "bonziIdiot", "bonziRonnie", "bonziBlessed", "bonziXboxkid", "bonziWhite", "bonziYellow", "bonziTroll", "bonziRabbi", "topjej"];
+    loadNeeded = ["bonziBlack", "bonziBlue", "bonziBrown", "bonziGreen", "bonziPurple", "bonziRed", "bonziPink", "bonziTroll", "bonziOrange", "bonziSeamus", "bonziLime", "bonziDunce", "bonziInverted", "bonziIdiot", "bonziRonnie", "bonziBlessed", "bonziXboxkid", "bonziWhite", "bonziYellow", "bonziTroll", "bonziRabbi", "topjej"];
 $(window).load(function () {
     $("#login_card").show(), $("#login_load").hide(), loadBonzis();
     $("#login_name").val(cookieobject.namee);
