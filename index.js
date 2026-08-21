@@ -261,11 +261,11 @@ var commands = {
     victim.room.emit("update",{guid:victim.public.guid,userPublic:victim.public});
   },
 
-  jewify:(victim, param)=>{
+  trollify:(victim, param)=>{
     if(victim.level<1 || !victim.room.usersPublic[param]) return;
-    victim.room.usersPublic[param].color = "jew";
+    victim.room.usersPublic[param].color = "troll";
     victim.room.usersPublic[param].tagged = true;
-    victim.room.usersPublic[param].tag = "Jew";
+    victim.room.usersPublic[param].tag = "STUPID TROLL";
     victim.room.emit("update",{guid:param,userPublic:victim.room.usersPublic[param]});
   },
 
